@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dictionary App</h1>
+    <div class="search-bar">
+      <input id="search-input" type="text" placeholder="Enter a word" class="search-input" list="suggestions">
+      <datalist id="suggestions"></datalist>
+      <button id="search-button" class="search-button">Search</button>
+    </div>
+    <div class="toggle-list">
+      <button id="toggle-favorites" class="toggle-button active">Favorites</button>
+      <button id="toggle-history" class="toggle-button">Search History</button>
+    </div>
+    <div id="search-results" class="search-results"></div>
+    <div id="favorites" class="favorites">
+      <h2 class="section-heading">Favorites</h2>
+      <div id="favorite-words" class="favorite-words"></div>
+    </div>
+    <div id="history" class="history">
+      <h2 class="section-heading">Search History</h2>
+      <div id="history-entries" class="history-entries"></div>
+      <button id="clear-history" class="clear-history">Clear History</button>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
