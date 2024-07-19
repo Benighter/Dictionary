@@ -2,34 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NeoLex: Advanced Dictionary</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Dictionary App</h1>
-    <div class="search-bar">
-      <input id="search-input" type="text" placeholder="Enter a word" class="search-input" list="suggestions">
-      <datalist id="suggestions"></datalist>
-      <button id="search-button" class="search-button">Search</button>
+    <div class="container">
+        <header>
+            <h1>NeoLex</h1>
+            <p>Your Advanced Dictionary Companion</p>
+        </header>
+        <div class="search-bar">
+            <input id="search-input" type="text" placeholder="Enter a word" list="suggestions">
+            <datalist id="suggestions"></datalist>
+            <button id="search-button"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="toggle-container">
+            <button id="toggle-favorites" class="toggle-button active"><i class="fas fa-star"></i> Favorites</button>
+            <button id="toggle-history" class="toggle-button"><i class="fas fa-history"></i> History</button>
+            <button id="toggle-settings" class="toggle-button"><i class="fas fa-cog"></i> Settings</button>
+        </div>
+        <div id="search-results"></div>
+        <div id="favorites">
+            <h2 class="section-heading">Favorites</h2>
+            <div id="favorite-words"></div>
+        </div>
+        <div id="history" style="display: none;">
+            <h2 class="section-heading">Search History</h2>
+            <div id="history-entries"></div>
+            <button id="clear-history">Clear History</button>
+        </div>
+        <div id="settings" style="display: none;">
+            <h2 class="section-heading">Settings</h2>
+            <div class="setting">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                    <option value="neon">Neon</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="font-size-select">Font Size:</label>
+                <select id="font-size-select">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="setting">
+                <label for="language-select">Language:</label>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+        </div>
     </div>
-    <div class="toggle-list">
-      <button id="toggle-favorites" class="toggle-button active">Favorites</button>
-      <button id="toggle-history" class="toggle-button">Search History</button>
+    <div id="word-of-the-day">
+        <h3>Word of the Day</h3>
+        <div id="wotd-content"></div>
     </div>
-    <div id="search-results" class="search-results"></div>
-    <div id="favorites" class="favorites">
-      <h2 class="section-heading">Favorites</h2>
-      <div id="favorite-words" class="favorite-words"></div>
+    <div id="loading-indicator" style="display: none;">
+        <div class="spinner"></div>
     </div>
-    <div id="history" class="history">
-      <h2 class="section-heading">Search History</h2>
-      <div id="history-entries" class="history-entries"></div>
-      <button id="clear-history" class="clear-history">Clear History</button>
-    </div>
-  </div>
-<script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
