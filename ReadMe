@@ -1,6 +1,6 @@
 # NeoLex Advanced Dictionary
 
-images/neolex-logo.png
+![Logo](images/neolex-logo.png)
 
 NeoLex is a state-of-the-art, feature-rich dictionary web application designed to provide an immersive and comprehensive language exploration experience. With its sleek interface and advanced functionality, NeoLex goes beyond simple word lookups to offer a deep dive into language and etymology.
 
@@ -29,11 +29,8 @@ NeoLex is a state-of-the-art, feature-rich dictionary web application designed t
 - **Keyboard Navigation**: Easily navigate the app using keyboard shortcuts.
 - **Easter Egg**: Discover a hidden surprise with the Konami Code!
 
-## Demo
 
-Check out the live demo of NeoLex [here](https://example.com/neolex-demo).
-
-![NeoLex Screenshot](https://example.com/neolex-screenshot.png)
+![NeoLex Screenshot](images/Neolex.png)
 
 ## Installation
 
